@@ -1,0 +1,22 @@
+Network intrusion
+Some exploit behaviors follow known patterns
+The biggest threat maybe one that has never been detected and classified (zero day attack)
+Part of detecting potential network intrusions is detecting anomalies. There are connections that aren't known to be attacks, but not resemble connection that have been observed in the past. 
+Unsupervised learning techniques like k-means can be used to detect anomolous network connections. (Doesn't necessarily mean it is intrusions)
+
+k-means can cluster connections based on statistics about each of them. Clusters can define regions of normal connections and known attacks.
+Everything else outside is unusual and potentially anomolous.
+
+
+1) the algorithm picks some data points as the initial cluster centroids.
+2) each datapoints is assigned to the nearest centroid
+3) for each cluster, a new cluster centroid is computed as the mean of the data points just assigned to that cluster.
+
+This process will repeat until certain iterations or all points are stabalized
+
+The organizers had already processed your network packet chain into summary information about individual network connections.
+
+Each row is one collection. For each collection, the dataset contains information like the number of bytes sent, login attempts,
+TCP errors. Each collection is one line of CSV -- formatted data, containing 38 features.
+A label is given in the last field. Most connections are labelled normal but some have been identified as examples of vaious types of network attacks. (23 types of attacks)
+
