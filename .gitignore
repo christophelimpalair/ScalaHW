@@ -1,2 +1,2 @@
-SampleData
+SampleData/**/*.txt
 .DS_Store
